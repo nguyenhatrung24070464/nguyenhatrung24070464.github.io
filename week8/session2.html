@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rectangle Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .calculator {
+            background-color: white;
+            padding: 100px;
+            border-radius: 25px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Rectangle Calculator</h2>
+        <label for="Radius">Radius:</label>
+        <input type="number" id="Radius" placeholder="Enter Radius">
+        <button onclick="calculate()">Calculate</button>
+        <div class="result" id="result"></div>
+        </div>
+        <script>
+            function calculate() {
+                const PI = 3.14;
+                const Radius = parseFloat(document.getElementById('Radius').value);
+                if (isNaN(Radius) || Radius <= 0) {
+                    document.getElementById('result').innerHTML = "Please enter a valid positive number.";
+                    return;
+                }
+                const perimeter = 2 * PI * Radius;
+                const area = PI * Math.pow(Radius, 2);
+                document.getElementById('result').innerHTML = `Perimeter: ${perimeter.toFixed(2)}<br>Area: ${area.toFixed(2)}`;
+            }
+        </script>
+        
+                 
+
+  
+    
+</body>
+</html>

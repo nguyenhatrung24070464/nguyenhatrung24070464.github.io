@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            width: 100%;
+            background-color: #17a2b8;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .btn:hover {
+            background-color: #138496;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>User Registration</h2>
+        <form>
+            <label for="firstname">First name</label>
+            <input type="text" id="firstname" placeholder="First name" required>
+
+            <label for="lastname">Last name</label>
+            <input type="text" id="lastname" placeholder="Last name" required>
+
+            <label for="email">Email address</label>
+            <input type="email" id="email" placeholder="Email address" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Input password" required>
+
+            <label for="confirm">Confirmation</label>
+            <input type="password" id="confirm" placeholder="Input confirm" required>
+
+            <button type="submit" class="btn">Register</button>
+        </form>
+    </div>
+
+</body>
+</html>
